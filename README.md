@@ -1,2 +1,1 @@
-# Celery-Redis-Example
-Just a practice
+# Celery-Redis

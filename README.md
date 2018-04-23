@@ -36,9 +36,9 @@ python manage.py runserver 0.0.0.0:8000
 
 En otra terminal.
 ```
-Celery -A cfehome worker -l info
+Celery -A CeleryExample worker -l info
 ```
 En otra terminal.
 ```
-celery -A cfehome beat -l info```
+celery -A CeleryExample beat -l info```
 ```

@@ -32,12 +32,13 @@ pip install -r requirements.txt
 ```
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
-´´´
+```
+
 En otra terminal.
-´´´
+```
 Celery -A cfehome worker -l info
-´´´
+```
 En otra terminal.
-´´´
-celery -A cfehome beat -l info
-´´´
+```
+celery -A cfehome beat -l info```
+```

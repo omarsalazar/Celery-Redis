@@ -29,13 +29,9 @@ source myvenv/bin/activate
 pip install -r requirements.txt
 ```
 ### Ejecuta el proyecto.
-```
-python manage.py migrate
-python manage.py runserver 0.0.0.0:8000
-```
+
 #### [Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
 
-En otra terminal.
 ```
 sudo systemctl start redis
 sudo systemctl status redis
@@ -50,5 +46,5 @@ celery -A CeleryExample worker -l info
 ```
 En otra terminal.
 ```
-celery -A CeleryExample beat -l info```
+celery -A CeleryExample beat -l info
 ```

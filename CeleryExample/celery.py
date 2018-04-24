@@ -29,4 +29,42 @@ app.conf.beat_schedule = {
         'schedule': 30.0,
         'args': (16, 16)
     },
+
+    'add-every-5-seconds': {
+        'task': 'multiply_two_numbers',
+        'schedule': 05.0,
+        'args': (5, 5)
+    },
+
+    'print-every-second':{
+        'task': 'rest',
+        'schedule': 01.0,
+        'args': (10, 2)
+    },
+
+    'send-every-6-seconds':{
+        'task': 'examplapp.tasks.email',
+        'schedule': 2,
+        'args': ("salazarpazomar@gmail.com",)
+    },
+    'send-every-6-secondsdwq':{
+        'task': 'examplapp.tasks.email',
+        'schedule': 2,
+        'args': ("escuela.salazarpazomar@gmail.com",)
+    },
+    'send-every-6-seconddwqdqws':{
+        'task': 'examplapp.tasks.email',
+        'schedule': 2,
+        'args': ("appledevice.salazarpazomar@gmail.com",)
+    },
+    'send-every-6-seconqwdqwds':{
+        'task': 'examplapp.tasks.email',
+        'schedule': 2,
+        'args': ("team@platzi.com",)
+    },
+    'send-every-6-seconqwddsadsaqwds':{
+        'task': 'examplapp.tasks.email',
+        'schedule': 2,
+        'args': ("salazarpazomar@gmail.com",)
+    },
 }

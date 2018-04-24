@@ -1,6 +1,9 @@
 from __future__ import absolute_import, unicode_literals
 import random
-from celery.decorators import task
+from celery.decorators import task, periodic_task
+from celery import shared_task
+from CeleryExample.celery import app
+from django.core.mail import EmailMessage
 
 @task(name="sum_two_numbers")
 def add(x, y):
@@ -11,6 +14,19 @@ def mul(x, y):
     total = x * (y * random.randint(3, 100))
     return total
 
-@task(name="sum_list_numbers")
-def xsum(numbers):
-    return sum(numbers)
+@task(name="rest")
+def area(x, y):
+    total = x - y
+    return total
+
+@app.task
+def email(data):
+    asunto = 'Test'
+    mensaje = 'Test message'
+    mail = EmailMessage(asunto, mensaje, to=[data])
+    try:
+        mail.send()
+    except Exception as e:
+        print(e)
+        print(type(e))
+    return data

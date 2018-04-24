@@ -33,6 +33,16 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
 ```
+#### [Dropwizard](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04) - Redis
+
+En otra terminal.
+```
+sudo systemctl start redis
+sudo systemctl status redis
+
+```
+
+#### Celery
 
 En otra terminal.
 ```

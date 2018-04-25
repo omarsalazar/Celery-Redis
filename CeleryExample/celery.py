@@ -23,6 +23,7 @@ app.autodiscover_tasks()
 def debug_task(self):
     print('Request: {0!r}'.format(self.request))
 
+
 app.conf.beat_schedule = {
     'add-every-30-seconds': {
         'task': 'sum_two_numbers',
@@ -36,35 +37,21 @@ app.conf.beat_schedule = {
         'args': (5, 5)
     },
 
-    'print-every-second':{
+    'print-every-second': {
         'task': 'rest',
         'schedule': 01.0,
         'args': (10, 2)
     },
 
-    'send-every-6-seconds':{
+    'send-every-10-seconds': {
         'task': 'examplapp.tasks.email',
-        'schedule': 2,
-        'args': ("salazarpazomar@gmail.com",)
+        'schedule': 10.0,
+        'args': ("omar.salazar@polimentes.com",)
     },
-    'send-every-6-secondsdwq':{
-        'task': 'examplapp.tasks.email',
-        'schedule': 2,
-        'args': ("escuela.salazarpazomar@gmail.com",)
-    },
-    'send-every-6-seconddwqdqws':{
-        'task': 'examplapp.tasks.email',
-        'schedule': 2,
-        'args': ("appledevice.salazarpazomar@gmail.com",)
-    },
-    'send-every-6-seconqwdqwds':{
-        'task': 'examplapp.tasks.email',
-        'schedule': 2,
-        'args': ("team@platzi.com",)
-    },
-    'send-every-6-seconqwddsadsaqwds':{
-        'task': 'examplapp.tasks.email',
-        'schedule': 2,
-        'args': ("salazarpazomar@gmail.com",)
+
+    'function-example': {
+        'task': 'examplapp.tasks.funcioni',
+        'schedule': 3.0,
+        'args': (3,)
     },
 }
